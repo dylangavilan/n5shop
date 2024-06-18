@@ -1,0 +1,31 @@
+$primary-color: blue;
+
+$light-purple: #7269FF;
+
+$dark-purple: #1f1647;
+$medium-purple: #3d0b60;
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  background-color: white;
+  border-bottom: $light-purple 1px solid;
+  padding: 0.5rem 1rem;
+   ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    color: black;
+    margin: 0;
+    gap: 0.5rem;
+    padding: 0;
+    li {
+      cursor: pointer;
+      &:hover {
+        color: $light-purple;
+        transition: 300ms;
+      }
+    } 
+   }
+   
+}

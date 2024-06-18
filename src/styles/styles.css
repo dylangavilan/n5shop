@@ -1,0 +1,128 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  background-color: white;
+  border-bottom: #7269FF 1px solid;
+  padding: 0.5rem 1rem;
+}
+.navbar ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  color: black;
+  margin: 0;
+  gap: 0.5rem;
+  padding: 0;
+}
+.navbar ul li {
+  cursor: pointer;
+}
+.navbar ul li:hover {
+  color: #7269FF;
+  transition: 300ms;
+}
+
+.card-container {
+  display: flex;
+  gap: 1rem;
+  justify-content: start;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 80%;
+  margin: auto;
+  padding: 0 2rem;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  background: white;
+  border: solid 0.5px lightgray;
+  padding: 16px;
+  border-radius: 8px;
+}
+
+.card-detail {
+  display: flex;
+  flex-direction: column;
+}
+.card-detail .price {
+  color: #7269FF;
+  font-weight: bold;
+}
+.card-detail .card-btn {
+  cursor: pointer;
+  background-color: #7269FF;
+  border-radius: 12px;
+  outline: none;
+  padding: 12px;
+  box-shadow: none;
+  color: white;
+  font-weight: semibold;
+  border: 0;
+  -webkit-user-select: none; /* for button */
+}
+
+html[data-theme=dark] .card {
+  background-color: #3a2870;
+  border: #7269FF 0.5px solid;
+}
+html[data-theme=dark] .card .card-detail .card-title {
+  color: white;
+}
+html[data-theme=dark] .card .card-detail .card-btn {
+  background-color: white;
+  color: #7269FF;
+  font-weight: bold;
+}
+
+.card-img img {
+  width: 12rem;
+}
+
+@media (max-width: 768px) {
+  .card-container {
+    padding: 0 1rem;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+  }
+  .card-img img {
+    width: 100%;
+    height: auto;
+  }
+}
+body {
+  background-color: #F2F2F2;
+}
+
+html[data-theme=dark] body {
+  background-color: #1f1647;
+}
+
+.section-title {
+  color: black;
+}
+
+html[data-theme=dark] .section-title {
+  color: white;
+}
+
+.button {
+  background-color: blue;
+  color: white;
+  padding: 10px;
+}
+.button:hover {
+  background-color: darkblue;
+}
+
+.home-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/*# sourceMappingURL=styles.css.map */

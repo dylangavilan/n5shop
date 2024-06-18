@@ -1,0 +1,43 @@
+@import '../components/nav/index.scss';
+@import './card.scss';
+@import '../components/inputs/index.scss';
+
+$light-purple: #7269FF;
+$bg-card-dark: #3a2870;
+
+$dark-purple: #1f1647;
+$medium-purple: #3B336C;
+
+body {
+    background-color: #F2F2F2;
+}
+html[data-theme="dark"] body {
+    background-color: $dark-purple;
+}
+
+.section-title {
+  color: black;
+}
+html[data-theme="dark"] .section-title {
+  color:white
+}
+
+
+.button {
+  background-color: $primary-color;
+  color: white;
+  padding: 10px;
+
+  &:hover {
+    background-color: darkblue;
+  }
+
+}
+
+
+.home-container {
+    display: flex;
+    flex-direction: column; 
+    justify-content: center;
+    align-items: center;
+}
