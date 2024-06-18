@@ -49,11 +49,11 @@ const CartSidebar = ({isOpen}) => {
     <div className={`${styles.sidebar} ${isOpen && styles.open}`}>
       <div className={styles.header}>
         <div></div>
-        <h2>Tu Carrito</h2>
+        <h2 className={styles.title}>Tu Carrito</h2>
         <button onClick={onClose}><IconX /></button>
       </div>
       {items.length === 0 ? 
-        <h3>No hay productos en su carrito</h3> :
+        <h3 className={styles.title}>No hay productos en su carrito</h3> :
         <div className={styles.container}>
           <div className={styles.cardContainer}> 
             {items?.map((el) => (

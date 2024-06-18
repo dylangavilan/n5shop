@@ -19,12 +19,24 @@ const useForm = () => {
     setName(e.target.value)
   }
   
-  const checkErrors = () => {
-    if(!name) setErrorName('Ingrese nombre'); else setErrorName('')
-    if(!quantity) setErrorQuantity('Ingrese cantidad'); else setErrorQuantity('')
-    if(!price) setErrorPrice('Ingrese cantidad'); else setErrorQuantity('')
+  const checkErrors = () => { 
+    let error = false;
+    if(!name) {
+        setErrorName('Ingrese nombre'); 
+        error = true;
+    } else setErrorName('');
+
+    if(!quantity) {
+        setErrorQuantity('Ingrese cantidad');
+        error= true
+     } else setErrorQuantity('');
+
+    if(!price){ 
+        setErrorPrice('Ingrese precio'); 
+        error = true;
+    }  else setErrorPrice('')
     
-        
+    return error;
   }
 
   return {

@@ -7,7 +7,7 @@ const Input = ({errorMessage, ...props}) => {
         // className={}
         {...props}
     />
-     {errorMessage && <span>{errorMessage}</span>} 
+     {errorMessage && <span className='error-message'>{errorMessage}</span>} 
     </>
   )
 }

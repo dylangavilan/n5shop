@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components';
-import { darkPurple, lightPurple, mediumPurple } from './constants';
+import { lightPurple } from './constants';
 const SecondaryBtn = ({children, ...props}) => {
   const Button = styled.button`
     background-color: white;

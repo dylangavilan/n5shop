@@ -3,7 +3,7 @@ import CartSidebar from "../components/sidebar";
 import { useSelector } from "react-redux";
 import { Outlet } from 'react-router-dom';
 
-export default function Layout({children}) {
+export default function Layout() {
 
   const { isOpen } = useSelector(state => state.cart)
 
@@ -16,7 +16,6 @@ export default function Layout({children}) {
             <Outlet />
         </main>
         <CartSidebar isOpen={isOpen} />
-        {/* <Footer /> */}
     </>
   )
 }

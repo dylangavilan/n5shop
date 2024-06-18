@@ -1,9 +1,11 @@
 import React from 'react'
-import { Form } from 'react-router-dom'
+import { Form, useNavigate } from 'react-router-dom'
 import Input from '../../components/inputs/input'
 import { Label } from '../../components/inputs/label'
 import PrimaryBtn from '../../components/button/primary'
 import { useForm } from '../../hooks/useForm'
+import { useDispatch } from 'react-redux'
+import { addProduct } from '../../store/productsSlice'
 const CreateProduct = () => {
   const {
     handleChangePrice,
@@ -12,8 +14,22 @@ const CreateProduct = () => {
     errorPrice,
     errorQuantity,
     errorName,
-    checkErrors
-  } = useForm()
+    checkErrors, 
+    quantity, 
+    name, 
+    price
+  } = useForm();
+  const dispatch = useDispatch();
+  const navigate = useNavigate()
+
+  const createP = () => {
+    const error = checkErrors();
+    
+    if(!error) {
+        dispatch(addProduct({ name, amount:quantity, price }));
+        navigate('/')
+    }
+  }
   return (
     <div className='form-container'>
         <h2>Crear producto</h2>
@@ -42,7 +58,7 @@ const CreateProduct = () => {
 
             </Form>
             <div className='btn-container'>
-                <PrimaryBtn onClick={checkErrors}>
+                <PrimaryBtn onClick={createP}>
                     Agregar
                 </PrimaryBtn>
             </div>

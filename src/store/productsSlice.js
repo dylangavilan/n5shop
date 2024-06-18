@@ -24,25 +24,17 @@ export const productsSlice = createSlice({
     },
 
     addProduct: (state, action) => {
-      if(!action.amount || !action.quantity || !action.name) return;
+      if(!action.payload.price || !action.payload.amount || !action.payload.name) return;
 
       const isIncluded = state.items.find((el)=>  el.name === action.payload.name);
-      
+
       if(isIncluded) return;
       
-      return [...state.items, {...action.payload, id: state.items.length}]
-
+      state.items = [...state.items, {...action.payload, id: state.items.length}];
     }
-    // decrement: (state) => {
-    //   state.value -= 1
-    // },
-    // incrementByAmount: (state, action) => {
-    //   state.value += action.payload
-    // },
   },
 })
 
-// Action creators are generated for each case reducer function
-export const { setProducts, updateQuantitys } = productsSlice.actions
+export const { setProducts, updateQuantitys, addProduct } = productsSlice.actions
 
 export default productsSlice.reducer
