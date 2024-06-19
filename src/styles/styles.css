@@ -10,16 +10,24 @@
   justify-content: center;
   list-style: none;
   color: black;
+  text-decoration: none;
   margin: 0;
   gap: 0.5rem;
   padding: 0;
 }
 .navbar ul li {
   cursor: pointer;
+  list-style: none;
+  text-decoration: none;
+  border: none;
 }
 .navbar ul li:hover {
   color: #7269FF;
   transition: 300ms;
+}
+.navbar ul a {
+  color: inherit;
+  text-decoration: none;
 }
 
 .card-container {
@@ -93,6 +101,153 @@ html[data-theme=dark] .card .card-detail .card-btn {
     height: auto;
   }
 }
+.form-container {
+  width: 28rem;
+  background-color: white;
+  padding: 1rem 2rem 2rem;
+  margin: auto;
+  border-radius: 16px;
+  border: 1px solid #7269FF;
+  margin-top: 4rem;
+}
+.form-container h2 {
+  text-align: center;
+  color: #7269FF;
+}
+.form-container form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1rem;
+}
+.form-container form input {
+  outline: none;
+  padding: 12px;
+  border: 1px solid #7269FF;
+  border-radius: 12px;
+  color: #7269FF;
+  font-weight: bold;
+}
+.form-container form input::placeholder {
+  font-weight: normal;
+}
+.form-container form label {
+  color: #7269FF;
+  font-weight: bold;
+}
+.form-container form .error-message {
+  color: red;
+  font-weight: semibold;
+}
+.form-container .input-container {
+  display: flex;
+  flex-direction: column;
+}
+.form-container .price-section {
+  display: flex;
+  gap: 16px;
+  justify-content: space-between;
+}
+.form-container .price-section .input-container {
+  display: flex;
+  flex-direction: column;
+  width: 45%;
+}
+.form-container .btn-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 24px;
+}
+.form-container .btn-container button {
+  width: 50%;
+}
+
+@media (max-width: 768px) {
+  .form-container {
+    width: 80%;
+  }
+}
+.sidebar {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  right: 0;
+  background-color: white;
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  transition: 0.5s;
+}
+.sidebar .header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 10%;
+}
+.sidebar .header button {
+  border: none;
+  background-color: transparent;
+  outline: none;
+}
+.sidebar .title {
+  text-align: center;
+}
+.sidebar.open {
+  width: 20rem;
+}
+.sidebar .container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 90%;
+}
+.sidebar .cardContainer {
+  display: flex;
+  flex-direction: column;
+  padding: 0 16px;
+}
+.sidebar .paymentContainer {
+  display: flex;
+  flex-direction: column;
+  padding: 16px;
+  gap: 12px;
+}
+.sidebar .paymentContainer .total {
+  display: flex;
+  justify-content: space-between;
+}
+.sidebar .paymentContainer .total span {
+  font-weight: 700;
+  font-size: 20px;
+}
+
+.item {
+  display: flex;
+  gap: 16px;
+  border: 1px solid;
+  justify-content: space-between;
+  align-items: center;
+}
+.item .description {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+.item .options {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+}
+
+.cover {
+  width: 6rem;
+}
+
 body {
   background-color: #F2F2F2;
 }
@@ -107,15 +262,6 @@ html[data-theme=dark] body {
 
 html[data-theme=dark] .section-title {
   color: white;
-}
-
-.button {
-  background-color: blue;
-  color: white;
-  padding: 10px;
-}
-.button:hover {
-  background-color: darkblue;
 }
 
 .home-container {

@@ -1,6 +1,7 @@
 @import '../components/nav/nav.scss';
 @import '../components/card/card.scss';
 @import '../components/inputs/inputs.scss';
+@import '../components/sidebar/sidebar.module.scss';
 
 $light-purple: #7269FF;
 $bg-card-dark: #3a2870;
@@ -22,17 +23,6 @@ html[data-theme="dark"] .section-title {
   color:white
 }
 
-
-.button {
-  background-color: $primary-color;
-  color: white;
-  padding: 10px;
-
-  &:hover {
-    background-color: darkblue;
-  }
-
-}
 
 
 .home-container {
