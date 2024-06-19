@@ -1,12 +1,12 @@
 import React from 'react'
 import styled from 'styled-components';
 import { lightPurple } from './constants';
-const SecondaryBtn = ({children, ...props}) => {
+const PrimaryBtn = ({children, type, ...props}) => {
   const Button = styled.button`
-    background-color: white;
-    color: ${lightPurple};
+    background-color: ${type === 'primary' ? lightPurple : "white" };
+    color: ${type === 'primary' ? 'white' : lightPurple};
     padding: 12px 24px;
-    border: 1px solid ${lightPurple};
+    border: ${lightPurple} ${type === 'primary' ? 'none' : `1px solid `};
     border-radius: 8px;
     font-size: 16px;
     cursor: pointer;
@@ -19,4 +19,4 @@ const SecondaryBtn = ({children, ...props}) => {
   )
 }
 
-export default SecondaryBtn;
+export default PrimaryBtn;

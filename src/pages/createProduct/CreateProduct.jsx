@@ -2,7 +2,7 @@ import React from 'react'
 import { Form, useNavigate } from 'react-router-dom'
 import Input from '../../components/inputs/input'
 import { Label } from '../../components/inputs/label'
-import PrimaryBtn from '../../components/button/primary'
+import Button from '../../components/button/button'
 import { useForm } from '../../hooks/useForm'
 import { useDispatch } from 'react-redux'
 import { addProduct } from '../../store/productsSlice'
@@ -58,9 +58,9 @@ const CreateProduct = () => {
 
             </Form>
             <div className='btn-container'>
-                <PrimaryBtn onClick={createP}>
+                <Button type='primary' onClick={createP}>
                     Agregar
-                </PrimaryBtn>
+                </Button>
             </div>
         </div>
     </div>

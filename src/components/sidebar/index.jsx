@@ -5,8 +5,8 @@ import { addMore, clear, handleOpen, lessOne, removeFromCart } from '../../store
 import Item from './item';
 import IconX from '../icons/xIcon';
 import { updateQuantitys } from '../../store/productsSlice';
-import PrimaryBtn from '../button/primary';
-import SecondaryBtn from '../button/secondary';
+import Button from '../button/button';
+// import SecondaryBtn from '../button/secondary';
 
 const CartSidebar = ({isOpen}) => {
   const { items } = useSelector((state) => state.cart)
@@ -69,10 +69,10 @@ const CartSidebar = ({isOpen}) => {
           <div className={styles.paymentContainer}>
             <div className={styles.total}>
               <span>TOTAL</span>
-              <span>{totalPrice}</span>
+              <span>${totalPrice}</span>
             </div>
-            <PrimaryBtn onClick={buyItems}>Comprar</PrimaryBtn>
-            <SecondaryBtn onClick={clearItems}>Limpiar</SecondaryBtn>
+            <Button type='primary' onClick={buyItems}>Comprar</Button>
+            <Button type='secondary' onClick={clearItems}>Limpiar</Button>
           </div>
         </div>
       }

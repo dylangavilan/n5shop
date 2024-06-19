@@ -2,7 +2,9 @@ import React from 'react'
 import style from './sidebar.module.scss'
 import TrashIcon from '../icons/TrashIcon'
 import ActionsItem from './actions'
+import IconBtn from './button-icons'
 const Item = ({ name, cover, price, amount, id, add, quantity, less, deleteItem }) => {
+
   return (
     <div className={style.item}>
         <div>
@@ -12,10 +14,10 @@ const Item = ({ name, cover, price, amount, id, add, quantity, less, deleteItem 
             <span>{name}</span>
             <span>{price}</span>
         </div>
-        <div>
-            <button onClick={deleteItem}>
+        <div className={style.options}>
+            <IconBtn onClick={deleteItem}>
                 <TrashIcon />
-            </button>
+            </IconBtn>
             <ActionsItem less={less} add={add} quantity={quantity}/>
         </div>
     </div>

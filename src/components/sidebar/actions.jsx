@@ -2,6 +2,8 @@ import React from 'react'
 import styled from 'styled-components'
 import AddIcon from '../icons/AddIcon'
 import MinusIcon from '../icons/MinusIcon'
+import IconBtn from './button-icons'
+
 
 const Wrapper = styled.div`
   display: flex;
@@ -11,13 +13,6 @@ const Wrapper = styled.div`
   justify-content: center;
 `
 
-const Button = styled.button`
-  border: 0;
-  outline: none;
-  background-color: transparent;
-  display: flex;
-  align-items: center;
-`
 
 const Quantity = styled.span`
   display: flex;
@@ -27,13 +22,13 @@ const Quantity = styled.span`
 const ActionsItem = ({quantity, add, less}) => {
   return (
     <Wrapper>
-        <Button onClick={less}>
+        <IconBtn onClick={less}>
             <MinusIcon />
-        </Button>
+        </IconBtn>
         <Quantity>{quantity}</Quantity>
-        <Button onClick={add}>
+        <IconBtn onClick={add}>
             <AddIcon />
-        </Button>
+        </IconBtn>
     </Wrapper>
   )
 }
