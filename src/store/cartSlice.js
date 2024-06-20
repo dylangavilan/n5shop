@@ -30,7 +30,7 @@ export const cartSlice = createSlice({
       if(!item) return;
       state.items = state.items.map(el => 
         el.id === item.id 
-          ? { ...el, quantity: el.quantity === 1 ? el.quantity : el.quantity - 1 } 
+          ? { ...el, quantity: el.quantity <= 1 ? el.quantity : el.quantity - 1 } 
           : el
       );  
     },
