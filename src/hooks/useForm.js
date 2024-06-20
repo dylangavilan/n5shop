@@ -35,7 +35,6 @@ const useForm = () => {
         setErrorPrice('Ingrese precio'); 
         error = true;
     }  else setErrorPrice('')
-    
     return error;
   }
 
