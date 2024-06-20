@@ -60,7 +60,6 @@ import cartReducer, {
         isOpen: false,
       };
       const actual = cartReducer(startState, lessOne(1));
-      console.log(actual)
       expect(actual.items[0].quantity).toEqual(0);
     });
   
